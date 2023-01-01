@@ -1,0 +1,14 @@
+.helpcontent {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.helpHeadline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img:hover {
+cursor: pointer;
+}

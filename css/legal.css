@@ -1,0 +1,14 @@
+.legalcontent {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.legalHeadline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img:hover {
+    cursor: pointer;
+    }

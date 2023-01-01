@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  font-size: 0.7rem;
+  animation-name: fadeIn;
+  animation-duration: 900ms;
+}
+
+button,
+.back,
+.forgotPassword {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: unset;
+  margin-bottom: 30px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  position: relative;
+  height: 20vh;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+}
+
+.header2{
+  justify-content: flex-start !important;
+  padding-left: 10%;
+}
+
+.header p {
+  margin-right: 20px;
+}
+
+.logo-animation {
+  padding-left: 10%;
+  position: absolute;
+  top: 0;
+  margin-top: 1rem;
+  width: 70px;
+  animation-name: logoToLeft;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  z-index: 999;
+}
+
+.logo-animation img {
+  margin-left: 10%;
+}
+
+@keyframes logoToLeft {
+  0% {
+    left: 50%;
+    top: calc(50% + 10vh);
+    transform: translate(-50%, -50%);
+    transform: scale(3);
+    padding-left: 0%;
+  }
+
+  50% {
+    left: 25%;
+    top: 25%;
+    transform: scale(2);
+    padding-left: 0%;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+    transform: scale(1);
+    padding-left: 10%;
+  }
+}
+
+.relative {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  background-color: white;
+  animation-name: loadIndexBG;
+  animation-duration: 460ms;
+  display: none;
+}
+
+@keyframes loadIndexBG {
+  0% {
+    background-color: #4589ff;
+    z-index: 50;
+    display: flex;
+  }
+
+  25% {
+    background-color: #4589ff;
+  }
+
+  50% {
+    background-color: #4589ff;
+  }
+
+  75% {
+    background-color: #4589ff;
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+/* .relative{
+    position: absolute;
+} */
+
+.logincontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  height: 80vh;
+}
+
+.logincontainer span {
+  height: 3px;
+  width: 170px;
+  background-color: #4589ff;
+  margin-bottom: 30px;
+}
+
+.forgotPassword {
+  color: #4589ff;
+}
+
+.loginform {
+  position: relative;
+  border-radius: 30px;
+  border: 1px;
+  box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 600px;
+  min-height: 400px;
+  background-color: white;
+  padding: 20px;
+}
+
+.loginform a {
+  text-decoration: none;
+}
+
+.loginform form {
+  display: flex;
+  flex-direction: column;
+}
+
+.logincontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input {
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.input img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.input input {
+  border: 0;
+  outline: 0;
+  width: 400px;
+}
+
+button {
+  border-radius: 4px;
+  width: 100px;
+  height: 35px;
+}
+
+.login-btn {
+  border: 1px solid #2a3647;
+  background-color: #2a3647;
+  color: white;
+  padding: 5px;
+}
+
+.guest-btn {
+  border: 1px solid black;
+  padding: 5px;
+  background-color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.hide-in-desktop {
+  display: none;
+}
+
+.loginform h2 {
+  text-align: center;
+}
+
+.buttons-forgot-password {
+  display: flex;
+  justify-content: center;
+}
+
+.forgot-btn {
+  width: auto;
+}
+
+.msgBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  background-color: #2a3647;
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
+  animation: slide-from-bottom 2s ease 0s 1 normal none;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1500px);
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

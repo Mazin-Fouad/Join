@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/mediaquerys.css" />
+    <!-- JS Files -->
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/register.js"></script>
+    <script src="./script/login.js"></script>
+    <title>Login</title>
+  </head>
+  <body onload="onload()">
+    <div class="relative">
+      <div id="animation" class=""></div>
+    </div>
+
+    <div class="logo-animation">
+      <img class="" src="./assets/img/logo_blue.png" alt="logo" />
+    </div>
+    <div class="header">
+      <div class="center hide-in-mobile">
+        <p>Not a Join user?</p>
+        <button class="login-btn" onclick="openSignUp()">Sign Up</button>
+      </div>
+    </div>
+    <div class="logincontainer">
+      <div class="loginform">
+        <h1>Log in</h1>
+        <span></span>
+        <form onsubmit="login(); return false;">
+          <div class="input">
+            <input type="email" placeholder="Email" required id="email" />
+            <img src="./assets/img/letter.png" />
+          </div>
+          <div class="input">
+            <input type="password" placeholder="Password" required id="password" />
+            <img src="./assets/img/lock.png" />
+          </div>
+          <div class="logincontent">
+            <div class="center"><input type="checkbox" />Remember me</div>
+            <div class="forgotPassword" onclick="openResetPassword()">Forgot my Password</div>
+          </div>
+
+          <div class="buttons">
+            <button class="login-btn" type="submit">Log in</button>
+            <button class="guest-btn" type="button" onclick="guestLogin()">Guest Log in</button>
+          </div>
+        </form>
+      </div>
+      <div class="hide-in-desktop">
+        <p>Not a Join user?</p>
+        <button class="login-btn" onclick="openSignUp()">Sign Up</button>
+      </div>
+      <div class="msgBox d-none" id="msgBox"></div>
+    </div>
+  </body>
+</html>

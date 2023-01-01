@@ -1,0 +1,16 @@
+<div class="header-container">
+  <span>Kanban Project Management Tool</span>
+  <img onclick="forwardingToSummary()" src="./assets/img/logo_blue.png" alt="logo" class="header-logo" />
+  <div class="icons-header">
+    <a href="./help.html"> <img src="./assets/img/qustionmark.png" alt="qustionicon" /></a>
+    <img onclick="onImageClick()" src="./assets/img/user.png" alt="profilepicture" class="profile-picture" />
+  </div>
+</div>
+
+<div id="context-menu">
+  <div class="logout">
+    <p onclick="changeLocation('help')" class="hide-nav-in-desktop">Help</p>
+    <p onclick="changeLocation('legal-notice')" class="hide-nav-in-desktop">Legal notice</p>
+    <p onclick="logOutUser()" class="">Log out</p>
+  </div>
+</div>

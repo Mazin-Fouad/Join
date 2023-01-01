@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JS Files -->
+    <script src="./script/login.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/contacts-template.js"></script>
+    <script src="./script/contacts.js"></script>
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/board.js"></script>
+    <script src="./script/addtask.js"></script>
+    <script>
+      setURL('https://gruppe-318.developerakademie.net/smallest_backend_ever');
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contacts.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/aside.css" />
+    <link rel="stylesheet" href="./css/mediaquerys.css" />
+    <link rel="stylesheet" href="./css/board.css" />
+    <link rel="stylesheet" href="./css/addtask.css" />
+
+    <title>Document</title>
+  </head>
+
+  <body onload="sortContacts()">
+    <div class="maincontainer">
+      <div w3-include-html="./assets/templates/aside.html" class="aside"></div>
+      <div class="right-container">
+        <div class="header">
+          <div w3-include-html="./assets/templates/header.html" class=""></div>
+        </div>
+        <div class="contacts-content">
+          <div class="contactlist" id="contactlist"></div>
+          <div class="contactinfo" id="contactinfo">
+            <div class="backarrow" id="backarrow">
+              <img src="./assets/img/Vector.png" alt="back" onclick="backToContactList()" />
+            </div>
+            <div class="headline">
+              <h1>Contacts</h1>
+              <span>Better with a team</span>
+            </div>
+            <div id="displaycontactinfos" class="displaycontactinfos"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div w3-include-html="./assets/templates/addTaskTemplateContacts.html" class=""></div>
+  </body>
+</html>

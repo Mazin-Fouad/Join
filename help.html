@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/help.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/aside.css" />
+    <link rel="stylesheet" href="./css/mediaquerys.css" />
+    <!-- JS Files -->
+    <script src="./script/main.js"></script>
+    <script src="./script/mini_backend.js"></script>
+    <title>Document</title>
+  </head>
+  <body onload="init()">
+    <div class="maincontainer">
+      <div w3-include-html="./assets/templates/aside.html" class="aside"></div>
+      <div class="right-container">
+        <div class="header">
+          <div w3-include-html="./assets/templates/header.html" class=""></div>
+        </div>
+
+        <div class="helpcontent">
+          <div class="helpHeadline">
+            <h1>Help</h1>
+            <img onclick="history.back()" src="assets/img/backarrowblack.svg" />
+          </div>
+          <h2>What is Join?</h2>
+          <p>
+            Join is a classical task management tool with a kanban-board. You can organize your tasks whithin a project or business processes. It is perfectly suitable for working together with your
+            team. Join let you and your team work more efficiently. You have all of your taks in focus und won't miss upcoming deadlines anymore. Start working with Join now!
+          </p>
+
+          <h2>How to use it</h2>
+
+          <table>
+            <tr>
+              1. Add a task with title, description and category. Assign the task to other team members of your contact list or invite new contacts.
+            </tr>
+            <br />
+            <tr>
+              2. Check the current status of your tasks in the kanban-board. You can drag and drop your task to change the status. Also it is possible to edit the task details.
+            </tr>
+            <br />
+            <tr>
+              3. Add team members to your contact list to communicate to them fastly. Also you can assign tasks directly to your contacts.
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

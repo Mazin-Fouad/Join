@@ -1,0 +1,147 @@
+<!-- Task Form -->
+<div class="formcontainer d-none" id="form-contacts">
+  <form onsubmit="checkAllInputs();return false">
+    <div class="addtask-content">
+
+
+      <div class="leftside-content">
+
+        <div class="middleline"></div>
+
+        <div class="title-container">
+
+          <p><b>Title</b></p>
+          <input required id="title" placeholder="Enter a title" type="text" />
+        </div>
+
+        <div class="description-container">
+          <p><b>Description</b></p>
+          <input required id="description" placeholder="Enter a Description" type="text" />
+        </div>
+
+        <div class="category-container">
+          <p><b>Category</b></p>
+
+          <!-- KATEGORIE -->
+          <div class="subtaskInput d-none" id="openCategoryInput">
+            <input id="inputCategory" placeholder="New category name" type="text" />
+            <div class="inputFieldColor">
+              <div class="color" id="inputFieldColor"></div>
+            </div>
+            <div class="subTaskImages">
+              <img class="cross rotate" src="./assets/img/add.png" alt="delete" onclick="closeCategoryInput()">
+              <img id="" class="accept" src="./assets/img/acceptimg.svg" onclick="createNewCategory()" alt="accept">
+            </div>
+          </div>
+
+          <div class="colors d-none" id="color">
+            <div class="color" style="background-color: lightblue;" onclick="pickColor('lightblue')"></div>
+            <div class="color" style="background-color: red;" onclick="pickColor('red')"></div>
+            <div class="color" style="background-color: green;" onclick="pickColor('green')"></div>
+            <div class="color" style="background-color: orange;" onclick="pickColor('orange')"></div>
+            <div class="color" style="background-color: violet;" onclick="pickColor('violet')"></div>
+            <div class="color" style="background-color: blue;" onclick="pickColor('blue')"></div>
+          </div>
+          <!-- KATEGORIE ENDE -->
+
+          <div class="multiselect" id="categoryDropdown">
+            <div class="selectBox" onclick="showCategorys()">
+              <select>
+                <option id="displayCategory">Select a category</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="categorys">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div id="assigned-container" class="category-container">
+          <p><b>Assigned to</b></p>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes('checkboxes')">
+              <select>
+                <option>Select contacts to assign</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes">
+            </div>
+            <div class="usercontainer" id="users">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="rightside-content">
+        <div class="date-container">
+          <p><b>Due date</b></p>
+          <input required id="date" type="date" />
+        </div>
+
+        <div class="prio-container">
+          <p><b>Prio</b></p>
+          <div class="button-container">
+            <button type="button" id="urgentButton" onclick="checkPriority('urgent'), changeColorofUrgentButton()">
+              <b id="urgentText">Urgent</b>
+              <img id="urgentImg" src="assets/img/highprio.svg" alt="" />
+            </button>
+            <button type="button" id="mediumButton" onclick="checkPriority('medium'),changeColorofMediumButton()">
+              <b id="mediumText">Medium</b>
+              <img id="mediumImg" src="assets/img/mediumprio.svg" alt="" />
+            </button>
+            <button type="button" id="lowButton" onclick="checkPriority('low'),changeColorofLowButton()">
+              <b id="lowText">Low</b>
+              <img id="lowImg" src="assets/img/lowprio.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="subtasks-container">
+          <p><b>Subtasks</b></p>
+          <div class="subtaskInput">
+            <input onkeydown="checkInputValue()" id="subtask" placeholder="Add new subtask" type="text" />
+            <div class="subTaskImages">
+              <img class="cross" src="./assets/img/add.png" alt="addTask" onclick="openInputfield('acceptButton')">
+              <button disabled="disabled" id="acceptButton" class="d-none" onclick="createSubtask()">
+                <img class="accept" src="./assets/img/acceptimg.svg" alt="accept">
+              </button>
+              <img id="acceptButton" class="accept d-none" src="./assets/img/acceptimg.svg" onclick="createSubtask()"
+                alt="accept">
+            </div>
+          </div>
+          <div id="subtaskList"></div>
+
+          <!--         <div class="checkbox-container" id="checkbox-container">
+              <input type="checkbox" />
+              <p>Subtask 1</p>
+            </div> -->
+        </div>
+
+        <div class="button-container-end">
+          <button onclick="closeInputsForm()" type="button" class="clear-button">
+            <b>Cancel</b>
+            <img src="assets/img/cancelimg.svg" alt="cancel" />
+          </button>
+          <button type="submit" class="create-button">
+            <b>Create task</b>
+            <img src="assets/img/acceptimg.svg" alt="cancel" />
+          </button>
+
+
+
+        </div>
+      </div>
+  </form>
+</div>
+
+<!-- //Task Form// -->
+
+</div>
+</div>
+</div>
+
+<!-- Task Popup -->

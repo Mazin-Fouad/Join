@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/board.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/aside.css" />
+  <link rel="stylesheet" href="./css/addtask.css" />
+  <link rel="stylesheet" href="./css/contacts.css" />
+  <link rel="stylesheet" href="./css/mediaquerys.css" />
+   <!-- JS Files -->
+   <script src="./script/main.js"></script>
+   <script src="./script/board.js"></script>
+   <script src="./script/board-template.js"></script>
+   <script src="./script/mini_backend.js"></script>
+   <script src="./script/addtask-template.js"></script>
+   <script src="./script/addtask.js"></script>
+   <script src="./script/login.js"></script>
+   <script src="./script/contacts.js"></script>
+   <script>setURL('https://gruppe-318.developerakademie.net/smallest_backend_ever');</script>
+  <title>Join-Board</title>
+</head>
+<body onload="init();">
+  <div class="maincontainer">
+    <div id="popUpBackground"class="">
+      <div class="task-popup d-none" id="taskPopup">
+
+
+      </div>
+    </div>
+    <div w3-include-html="./assets/templates/aside.html" class="aside"></div>
+    <div class="right-container">
+      <div class="header">
+        <div w3-include-html="./assets/templates/header.html" class=""></div>
+      </div>
+
+      <div class="wrapper">
+
+        
+        <div class="board">
+          <div class="row">
+            <h1>Board</h1>
+            <div class="addTaskBTNmobile" onclick="showInputsForm()">
+              <p>+</p>
+            </div>
+          </div>
+          <div class="searchfield">
+            <div><input type="text" id="boardSearch" placeholder="Find Task" onkeyup="searchTasks(this.value)" />
+              <img class="search-icon" src="./assets/img/search-icon.png" />
+            </div>
+
+            <input type="button" id="addTask-btn" onclick="showInputsForm()" value="Add Task +">
+          </div>
+        </div>
+
+        <div class="all-tasks-contnet">
+
+          <div class="todo" ondrop="moveTo('open')" ondragover="allowDrop(event)">
+            <div class="create-todo">
+              <h2>Todo</h2>
+              <span onclick="showInputsForm()">+</span>
+            </div>
+
+            <div id="todoOpenContent">
+
+
+            </div>
+          </div>
+
+
+          <div class="todo" ondrop="moveTo('inProgress')" ondragover="allowDrop(event)">
+            <div class="create-todo">
+              <h2>In Progress</h2>
+              <span onclick="showInputsForm()">+</span>
+            </div>
+
+            <div id="todoInProgressContent">
+
+
+            </div>
+          </div>
+
+          <div class="todo" ondrop="moveTo('awaitingFeedback')" ondragover="allowDrop(event)">
+            <div class="create-todo">
+              <h2>Awaiting Feedback</h2>
+              <span onclick="showInputsForm()">+</span>
+            </div>
+
+            <div id="todoAwaitingFeedbackContent">
+
+            </div>
+
+          </div>
+
+          <div class="todo" ondrop="moveTo('done')" ondragover="allowDrop(event)">
+            <div class="create-todo">
+              <h2>Done</h2>
+              <span onclick="showInputsForm()">+</span>
+            </div>
+
+            <div id="todoDoneContent">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      
+        <div w3-include-html="./assets/templates/addTaskTemplateBoard.html" class=""></div>
+    
+
+</body>
+
+</html>

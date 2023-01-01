@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/mediaquerys.css">
+    <!-- JS Files -->
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/summary.js"></script>
+    <script>setURL('https://gruppe-318.developerakademie.net/smallest_backend_ever');</script>
+    <title>Summary</title>
+</head>
+<body onload="loadSummary()">
+    <div class="maincontainer">
+        <div w3-include-html="./assets/templates/aside.html" class="aside">
+
+
+        </div>
+        <div class="right-container">
+
+            <div class="header">
+                <div w3-include-html="./assets/templates/header.html" class=""></div>
+            </div>
+            <div class="wrapper">
+                <div class="headline headline-desktop">
+                    <h1>Summary</h1> <span>Everything in a nutshell</span>
+                </div>
+                <div class="contentbox">
+                    
+                    <div class="content">
+                        <div class="headline headline-mobile">
+                            <h1>Summary</h1> <span>Everything in a nutshell</span>
+                            <span class="pipeline"></span>
+                        </div>
+                        <div class="row1">
+                            <div class="tasks">
+                                <h2 id="tasksInBoard"></h2>
+                                <span>Tasks in</span>
+                                <span>Board</span>
+
+                            </div>
+                            <div class="tasks">
+                                <h2 id="tasksInProgress"></h2>
+                                <span>Tasks in</span>
+                                <span>Progress</span>
+
+                            </div>
+                            <div class="tasks">
+                                <h2 id="tasksAwaitingFeedback"></h2>
+                                <span>Awaiting</span>
+                                <span>Feedback</span>
+
+                            </div>
+                        </div>
+                        <div class="row1">
+
+                            <div class="deadline">
+                                <div class="box">
+                                    <img src="./assets/img/urgent.png" class="urgentpicture">
+                                    <div class="box-text">
+                                        <h2 id="urgentTasks">1</h2>
+                                        <span>Urgent</span>
+                                    </div>
+                                </div>
+                                <div class="date-box">
+                                    <h3 id="date">October 13, 2022</h3>
+                                    <span>Upcoming Deadline</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row1">
+                            <div class="tasks box1 width">
+                                <img src="./assets/img/todo.png" class="hover" alt="">
+                                <div class="box-text">
+                                    <h3 id="tasksToDo"></h3>
+                                    <span>To-do</span>
+                                </div>
+                            </div>
+                            <div class="tasks box1 width margin-left">
+                                <img src="./assets/img/done.png" class="hover" alt="">
+                                <div class="box-text">
+                                    <h3 id="tasksDone"></h3>
+                                    <span>Done</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="greetings">
+                        <div class="text">
+                            <h2 id="time">
+
+                            </h2>
+                            <span id="greetingName"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

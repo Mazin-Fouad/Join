@@ -1,0 +1,76 @@
+.header-container {
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+}
+
+.icons-header {
+  display: flex;
+  align-items: center;
+}
+
+.icons-header a {
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.profile-picture:hover {
+  cursor: pointer;
+}
+
+.white {
+  background-color: white;
+  height: 60px;
+}
+
+.header-logo {
+  display: none;
+  height: 70px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.logout {
+  position: absolute;
+  top: 8vh;
+  right: 20px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(43, 54, 70);
+  font-size: 20px;
+  color: white;
+  border-radius: 30px 0px 30px 30px;
+  padding: 2px 30px;
+  z-index: 999;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+
+#context-menu {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.hide-nav-in-desktop {
+  display: none;
+}

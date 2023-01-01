@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/addtask.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/aside.css" />
+    <link rel="stylesheet" href="./css/contacts.css" />
+    <link rel="stylesheet" href="./css/mediaquerys.css" />
+    <!-- JS Files -->
+    <script src="./script/addtask-template.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/contacts.js"></script>
+    <script>
+      setURL('https://gruppe-318.developerakademie.net/smallest_backend_ever');
+    </script>
+
+    <title>Document</title>
+  </head>
+
+  <body onload="init()">
+    <div class="maincontainer">
+      <div w3-include-html="./assets/templates/aside.html" class="aside"></div>
+      <div class="right-container">
+        <div class="header">
+          <div w3-include-html="./assets/templates/header.html" class=""></div>
+        </div>
+
+        <div w3-include-html="./assets/templates/addtasktemp.html" class=""></div>
+      </div>
+    </div>
+    <script src="./script/addtask.js"></script>
+  </body>
+</html>
