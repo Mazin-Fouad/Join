@@ -302,3 +302,9 @@ async function createNewCategory() {
     }
   }
 }
+
+function clearForm() {
+  title.value = '';
+  description.value = '';
+  date.value = '';
+}
