@@ -313,9 +313,6 @@ option {
 .subTaskImages {
   display: flex;
   align-items: center;
-  position: absolute;
-  right: 10px;
-  top: 11px;
 }
 
 .subTaskImages img {
@@ -356,9 +353,21 @@ option {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 3em;
+  margin-right: 10px;
 }
 
 .usercontainer {
   display: flex;
+}
+
+.iconsWrapper {
+  display: flex;
+}
+
+#formcontacts{
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  z-index: 2;
 }

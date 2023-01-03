@@ -1,6 +1,6 @@
 <!-- Task Form -->
 <div class="formcontainer d-none" id="form-contacts">
-  <form onsubmit="checkAllInputs();return false">
+  <form onsubmit="checkAllInputs();return false" id="formcontacts">
     <div class="addtask-content">
 
 
@@ -25,12 +25,14 @@
           <!-- KATEGORIE -->
           <div class="subtaskInput d-none" id="openCategoryInput">
             <input id="inputCategory" placeholder="New category name" type="text" />
-            <div class="inputFieldColor">
-              <div class="color" id="inputFieldColor"></div>
-            </div>
-            <div class="subTaskImages">
-              <img class="cross rotate" src="./assets/img/add.png" alt="delete" onclick="closeCategoryInput()">
-              <img id="" class="accept" src="./assets/img/acceptimg.svg" onclick="createNewCategory()" alt="accept">
+            <div class="iconsWrapper">
+              <div class="inputFieldColor">
+                <div class="color" id="inputFieldColor"></div>
+              </div>
+              <div class="subTaskImages">
+                <img class="cross rotate" src="./assets/img/add.png" alt="delete" onclick="closeCategoryInput()">
+                <img id="" class="accept" src="./assets/img/acceptimg.svg" onclick="createNewCategory()" alt="accept">
+              </div>
             </div>
           </div>
 
