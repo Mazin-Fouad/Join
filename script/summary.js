@@ -83,15 +83,25 @@ function checkForUrgent(task) {
 
 function checkForLowerDate() {
   if (urgentTasks.length > 0) {
-    let lowestDate = urgentTasks[0]['date'];
+    let lowestDate = null;
     for (let i = 0; i < urgentTasks.length; i++) {
       const date = urgentTasks[i]['date'];
-      if (lowestDate > date) {
-        lowestDate = date;
+      console.log(date);
+      if (checkDateLowerThanToday(date)) {
+        if (lowestDate == null || lowestDate > date) {
+          lowestDate = date;
+        }
       }
     }
-    renderDate(lowestDate);
+    if (lowestDate != null) {
+      renderDate(lowestDate);
+    }
   }
+}
+
+function checkDateLowerThanToday(date) {
+  let today = new Date().toISOString().slice(0, 10);
+  return date > today;
 }
 
 function renderDate(date) {

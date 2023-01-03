@@ -73,8 +73,10 @@ function checkBoxes() {
   temporarySubTasks = [];
   for (let i = 0; i < users.length; i++) {
     const checkbox = document.getElementById('checkbox' + i);
-    if (checkbox.checked) {
-      temporaryAssigned.push(users[i]['name']);
+    if (checkbox) {
+      if (checkbox.checked) {
+        temporaryAssigned.push(users[i]['name']);
+      }
     }
   }
   renderCheckboxes(allSubtasks);
