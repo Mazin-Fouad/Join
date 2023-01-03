@@ -309,4 +309,17 @@ function clearForm() {
   title.value = '';
   description.value = '';
   date.value = '';
+  resetPrioBtns();
+}
+
+function resetPrioBtns() {
+  document.getElementById('mediumButton').classList.remove('mediumButtonBackground');
+  document.getElementById('lowButton').classList.remove('lowButtonBackground');
+  document.getElementById('urgentButton').classList.remove('urgentButtonBackground');
+  document.getElementById('urgentImg').classList.remove('prio-img-white');
+  document.getElementById('mediumImg').classList.remove('prio-img-white');
+  document.getElementById('lowImg').classList.remove('prio-img-white');
+  document.getElementById('urgentText').classList.remove('white-text');
+  document.getElementById('mediumText').classList.remove('white-text');
+  document.getElementById('lowText').classList.remove('white-text');
 }
