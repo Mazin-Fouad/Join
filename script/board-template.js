@@ -98,7 +98,7 @@ function editTaskContent(i) {
           <div id="btnHolder" onclick="pushEditTask(${i})">
             <div class="saveBtn">
               <p>Ok</p>  
-          <img  src="./assets/img/done.png" alt="save">
+          <img  src="./assets/img/done.png" alt="save" >
         </div>
           
   </div>
