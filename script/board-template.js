@@ -95,10 +95,10 @@ function editTaskContent(i) {
               
             </div>
           </div>
-          <div id="btnHolder">
+          <div id="btnHolder" onclick="pushEditTask(${i})">
             <div class="saveBtn">
               <p>Ok</p>  
-          <img  src="./assets/img/done.png" alt="save" onclick="pushEditTask(${i})">
+          <img  src="./assets/img/done.png" alt="save">
         </div>
           
   </div>
