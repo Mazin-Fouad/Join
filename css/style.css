@@ -139,6 +139,7 @@ a {
   align-items: center;
   height: 130px;
   width: 130px;
+  cursor: pointer;
 }
 
 .tasks:hover {

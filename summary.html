@@ -15,7 +15,7 @@
     <script src="./script/main.js"></script>
     <script src="./script/summary.js"></script>
     <script>setURL('https://gruppe-318.developerakademie.net/smallest_backend_ever');</script>
-    <title>Summary</title>
+    <title>Join-Summary</title>
 </head>
 <body onload="loadSummary()">
     <div class="maincontainer">
@@ -40,19 +40,19 @@
                             <span class="pipeline"></span>
                         </div>
                         <div class="row1">
-                            <div class="tasks">
+                            <div class="tasks" onclick="forwardToBoard()">
                                 <h2 id="tasksInBoard"></h2>
                                 <span>Tasks in</span>
                                 <span>Board</span>
 
                             </div>
-                            <div class="tasks">
+                            <div class="tasks" onclick="forwardToBoard()">
                                 <h2 id="tasksInProgress"></h2>
                                 <span>Tasks in</span>
                                 <span>Progress</span>
 
                             </div>
-                            <div class="tasks">
+                            <div class="tasks" onclick="forwardToBoard()">
                                 <h2 id="tasksAwaitingFeedback"></h2>
                                 <span>Awaiting</span>
                                 <span>Feedback</span>
@@ -62,14 +62,14 @@
                         <div class="row1">
 
                             <div class="deadline">
-                                <div class="box">
+                                <div class="box" onclick="forwardToBoard()">
                                     <img src="./assets/img/urgent.png" class="urgentpicture">
                                     <div class="box-text">
                                         <h2 id="urgentTasks">1</h2>
                                         <span>Urgent</span>
                                     </div>
                                 </div>
-                                <div class="date-box">
+                                <div class="date-box" onclick="forwardToBoard()">
                                     <h3 id="date">October 13, 2022</h3>
                                     <span>Upcoming Deadline</span>
                                 </div>
@@ -77,14 +77,14 @@
                         </div>
 
                         <div class="row1">
-                            <div class="tasks box1 width">
+                            <div class="tasks box1 width" onclick="forwardToBoard()">
                                 <img src="./assets/img/todo.png" class="hover" alt="">
                                 <div class="box-text">
                                     <h3 id="tasksToDo"></h3>
                                     <span>To-do</span>
                                 </div>
                             </div>
-                            <div class="tasks box1 width margin-left">
+                            <div class="tasks box1 width margin-left" onclick="forwardToBoard()">
                                 <img src="./assets/img/done.png" class="hover" alt="">
                                 <div class="box-text">
                                     <h3 id="tasksDone"></h3>

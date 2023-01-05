@@ -74,7 +74,7 @@
     overflow-y: scroll;
   }
 
-  #editCheckBoxes{
+  #editCheckBoxes {
     height: 80%;
     overflow-y: scroll;
   }
@@ -227,7 +227,34 @@
   }
 }
 
+@media (max-width: 1025px) {
+  #formcontacts {
+    position: absolute !important;
+    top: 2% !important;
+    left: 7% !important;
+    width: 80% !important;
+  }
+
+  .leftside-content,
+  .rightside-content {
+    width: 85% !important;
+  }
+
+  .title-container input {
+    height: 0 !important;
+  }
+
+  .description-container input {
+    height: 40px !important;
+  }
+}
+
 @media (max-width: 1027px) {
+  #form-board {
+    left: -6px;
+    top: 2% !important;
+  }
+
   .name-and-button h2 {
     font-size: unset;
   }

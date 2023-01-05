@@ -23,7 +23,7 @@ function footerTemplate(firstLetter, secondLetter, restAssigendLength, printTask
   return /*html*/ `
       <div class="footer-circels">
             <span id="firstLettersContainer${i}">${firstLetter}${secondLetter}</span>
-            <span id="restLength${i}">${restAssigendLength}</span>
+            <span id="restLength${i}">+${restAssigendLength}</span>
           </div>
 
           <div class="footer-images-container">            

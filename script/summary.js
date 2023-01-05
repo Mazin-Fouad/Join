@@ -132,3 +132,7 @@ function fillContent() {
     document.getElementById('date').innerHTML = `-`;
   }
 }
+
+function forwardToBoard() {
+  window.location.href = 'board.html';
+}
