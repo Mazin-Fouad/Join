@@ -1,5 +1,4 @@
-@media (max-width: 350px) {
-}
+@media (max-width: 350px) {}
 
 .todo {
   width: 280px;
@@ -61,6 +60,7 @@
 }
 
 @media (max-width: 575.98px) {
+
   .tasks h2,
   .box-text h3,
   #urgentTasks {
@@ -86,6 +86,7 @@
   .overSelect {
     width: 89%;
   }
+
   #assigendToContainer {
     height: 100%;
     overflow-y: scroll;
@@ -179,10 +180,9 @@
     align-items: center;
   }
 
-  /*   #taskPopup, #taskPopupContacts {
-    width: 93vw;
-    height: 95vh;
-  } */
+  .contacts-inputs {
+    width: 90%
+  }
 
   #taskPopup,
   #taskPopupContacts {
@@ -338,8 +338,8 @@
     align-items: center;
   }
 
-  .leftside-content div + input,
-  .rightside-content div + input {
+  .leftside-content div+input,
+  .rightside-content div+input {
     width: 100%;
   }
 
