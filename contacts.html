@@ -40,18 +40,32 @@
 <body onload="sortContacts()">
   <div class="maincontainer">
     <div id="popUpBackgroundContacts" class="">
-      <div class="d-none" id="taskPopupContacts">
+      <div class="d-none  backgroundpopupcolor" id="taskPopupContacts">
 
         <h2>Add a new Contact</h2>
-        <div class="contacts-inputs">
-          <h3>Name</h3>
-          <input type="text" placeholder="Name">
-          <h3>Email</h3>
-          <input type="email" placeholder="Email">
-          <h3>Phone</h3>
-          <input type="text" placeholder="Phone">
+        
+          <form onsubmit=""  class="contacts-inputs">
 
-        </div>
+            <h3>Name</h3>
+            <input type="text" placeholder="Name" id="newContactName">
+            <h3>Email</h3>
+            <input type="email" placeholder="Email" id="newContactEmail">
+            <h3>Phone</h3>
+            <input type="text" placeholder="Phone" id="newContactPhone">
+            <div class="buttons">
+              <button class="create-button">
+                <b>Add new Contact</b>
+                <img src="assets/img/acceptimg.svg" alt="cancel" />
+              </button>
+              <button onclick="closeNewContactPopUp()" type="button" class="clear-button">
+                <b>Cancel</b>
+                <img src="assets/img/cancelimg.svg" alt="cancel" />
+              </button>
+
+            </div>
+
+          </form>
+       
 
       </div>
     </div>

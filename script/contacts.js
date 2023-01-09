@@ -9,6 +9,7 @@ let contactsOpenForMobile = false;
 async function sortContacts() {
   await init();
   users.sort(function (a, b) {
+    console.log(a.name, b.name);
     let x = a.name.toUpperCase();
     let y = b.name.toUpperCase();
     return x == y ? 0 : x > y ? 1 : -1;
@@ -139,4 +140,22 @@ function addNewContact(){
   /* document.getElementById('taskPopupContacts').innerHTML = "test"; */
   document.getElementById('popUpBackgroundContacts').classList.add('popUpBackground');
   document.getElementById('taskPopupContacts').classList.remove('d-none');
+  pushContactToArray();
+}
+
+
+async function pushContactToArray(){
+let name = document.getElementById('newContactName');
+let email = document.getElementById('newContactEmail');
+let phone = document.getElementById('newContactPhone');
+
+users.push({name: name.value, email: email.value, phone: phone.value})
+await backend.setItem('users', JSON.stringify(users));
+
+}
+
+function closeNewContactPopUp(){
+  document.getElementById('popUpBackgroundContacts').classList.remove('popUpBackground');
+  document.getElementById('taskPopupContacts').classList.add('d-none');
+
 }
