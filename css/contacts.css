@@ -163,7 +163,7 @@
   margin-right: 20px;
 }
 
-.contactIcon>span {
+.contactIcon > span {
   color: #fff;
 }
 
@@ -208,7 +208,6 @@
   flex-direction: column;
 }
 
-
 .buttons {
   display: flex;
   justify-content: space-around;
@@ -217,7 +216,7 @@
   margin-top: 30px;
 }
 
-.buttons button{
+.buttons button {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -226,6 +225,6 @@
   border-radius: 10px;
 }
 
-.backgroundpopupcolor{
+.backgroundpopupcolor {
   background-color: #f6f7f8 !important;
 }

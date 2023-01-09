@@ -137,10 +137,8 @@ function backToContactList() {
 }
 
 function addNewContact() {
-  /* document.getElementById('taskPopupContacts').innerHTML = "test"; */
   document.getElementById('popUpBackgroundContacts').classList.add('popUpBackground');
   document.getElementById('taskPopupContacts').classList.remove('d-none');
-  // pushContactToArray();
 }
 
 async function pushContactToArray() {

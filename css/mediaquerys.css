@@ -1,4 +1,5 @@
-@media (max-width: 350px) {}
+@media (max-width: 350px) {
+}
 
 .todo {
   width: 280px;
@@ -60,7 +61,6 @@
 }
 
 @media (max-width: 575.98px) {
-
   .tasks h2,
   .box-text h3,
   #urgentTasks {
@@ -69,6 +69,15 @@
 }
 
 @media (max-width: 788.98px) {
+  .create-button,
+  .clear-button {
+    padding: 20px 30px;
+    white-space: nowrap;
+  }
+
+  .create-button img {
+    margin-left: 5px;
+  }
   .cancel-right {
     width: 95%;
   }
@@ -181,7 +190,7 @@
   }
 
   .contacts-inputs {
-    width: 90%
+    width: 90%;
   }
 
   #taskPopup,
@@ -212,6 +221,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-top: 75px;
   }
 
   .input {
@@ -338,8 +348,8 @@
     align-items: center;
   }
 
-  .leftside-content div+input,
-  .rightside-content div+input {
+  .leftside-content div + input,
+  .rightside-content div + input {
     width: 100%;
   }
 
