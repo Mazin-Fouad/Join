@@ -136,26 +136,23 @@ function backToContactList() {
   }
 }
 
-function addNewContact(){
+function addNewContact() {
   /* document.getElementById('taskPopupContacts').innerHTML = "test"; */
   document.getElementById('popUpBackgroundContacts').classList.add('popUpBackground');
   document.getElementById('taskPopupContacts').classList.remove('d-none');
-  pushContactToArray();
+  // pushContactToArray();
 }
 
+async function pushContactToArray() {
+  let name = document.getElementById('newContactName');
+  let email = document.getElementById('newContactEmail');
+  let phone = document.getElementById('newContactPhone');
 
-async function pushContactToArray(){
-let name = document.getElementById('newContactName');
-let email = document.getElementById('newContactEmail');
-let phone = document.getElementById('newContactPhone');
-
-users.push({name: name.value, email: email.value, phone: phone.value})
-await backend.setItem('users', JSON.stringify(users));
-
+  users.push({ name: name.value, email: email.value, phone: phone.value });
+  await backend.setItem('users', JSON.stringify(users));
 }
 
-function closeNewContactPopUp(){
+function closeNewContactPopUp() {
   document.getElementById('popUpBackgroundContacts').classList.remove('popUpBackground');
   document.getElementById('taskPopupContacts').classList.add('d-none');
-
 }
