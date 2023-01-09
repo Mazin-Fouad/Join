@@ -134,3 +134,9 @@ function backToContactList() {
     handleWindowResize();
   }
 }
+
+function addNewContact(){
+  /* document.getElementById('taskPopupContacts').innerHTML = "test"; */
+  document.getElementById('popUpBackgroundContacts').classList.add('popUpBackground');
+  document.getElementById('taskPopupContacts').classList.remove('d-none');
+}

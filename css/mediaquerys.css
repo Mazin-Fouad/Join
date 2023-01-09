@@ -96,6 +96,11 @@
     cursor: pointer;
   }
 
+  .editButton{
+    bottom: 32px;
+    right: 32px;
+  }
+
   .header-container {
     padding-left: 5%;
     padding-right: 5%;
@@ -157,16 +162,18 @@
     align-items: center;
   }
 
-  #taskPopup {
+  #taskPopup, #taskPopupContacts {
     width: 93vw;
     height: 95vh;
   }
 
-  #taskPopup {
+  #taskPopup, #taskPopupContacts {
     height: 100%;
     width: 100%;
     border-radius: 0;
     padding: 0;
+    padding-left: 40px;
+    padding-top: 40px;
   }
 
   .hide-in-mobile {

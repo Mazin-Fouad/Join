@@ -214,7 +214,7 @@ label {
 }
 
 /* Task Popup */
-#taskPopup {
+#taskPopup, #taskPopupContacts {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -227,6 +227,10 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
+}
+
+#taskPopupContacts h2{
+  text-align: center;
 }
 
 #categoryPopup {

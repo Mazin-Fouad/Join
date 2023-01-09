@@ -30,7 +30,7 @@ function openContactHTML(splittedName, mail) {
 </div>
 
 <div class="addcontact">
-    <div class="contactbutton">
+    <div class="contactbutton" onclick="addNewContact()">
         <p>NEW CONTACT</p>
         <img src="./assets/img/contactlogo.png" alt="">
     </div>
