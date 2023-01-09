@@ -86,7 +86,6 @@ function checkForLowerDate() {
     let lowestDate = null;
     for (let i = 0; i < urgentTasks.length; i++) {
       const date = urgentTasks[i]['date'];
-      console.log(date);
       if (checkDateLowerThanToday(date)) {
         if (lowestDate == null || lowestDate > date) {
           lowestDate = date;

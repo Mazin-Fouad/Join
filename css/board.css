@@ -100,6 +100,11 @@
   margin: 20px;
 }
 
+.create-todo h2 {
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
 .todo-content {
   display: flex;
   flex-direction: column;
@@ -285,6 +290,10 @@ label {
   overflow-y: scroll;
 }
 
+#assigendToContainer b {
+  margin: 1em 0;
+}
+
 .assigned-box {
   display: flex;
   justify-content: flex-start;
@@ -365,6 +374,7 @@ input {
   left: 15%;
   width: 70%;
   z-index: 2;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 progress {

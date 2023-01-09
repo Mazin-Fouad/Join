@@ -8,7 +8,7 @@ function TaskCard(taskCategory, task, i, ProgressbarValue, fulfillment) {
               <!-- todo -->
               <div class="progress-bar-container" id ="progress-bar-container${i}">
               <progress class="progressbar" id="progressbar${i}" value="${ProgressbarValue}" max="100"></progress>
-                <label id="label${i}">Done&nbsp;${fulfillment}/3</label>
+                <!-- <label id="label${i}">Done&nbsp;${fulfillment}/3</label> -->
               </div>
     
               <div class="box-footer" id ="footer${i}">
@@ -46,7 +46,7 @@ function createTaskContentHTML() {
   <div class="assigend-popup">
   <span id="assigendCircels"></span>
   <div id="assigendToContainer">
-   
+  <b>Assigned To:</b>
   </div>
   </div>
   <div id="btnHolder"></div>

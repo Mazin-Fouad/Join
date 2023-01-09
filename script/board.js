@@ -154,7 +154,6 @@ function showOpenTaskPopup(i) {
   document.getElementById('btnHolder').innerHTML = editTaskButton(i);
   checkPriorityPopup(allTasks, i);
   let assigendToContent = document.getElementById('assigendToContainer');
-  assigendToContent.innerHTML = '';
   for (let j = 0; j < allTasks[i].assigned.length; j++) {
     const assignedUser = allTasks[i].assigned[j];
     let secondLetter = assignedUser.split(' ')[1].charAt(0);
