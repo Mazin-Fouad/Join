@@ -69,6 +69,23 @@
 }
 
 @media (max-width: 788.98px) {
+  .cancel-right {
+    width: 95%;
+  }
+
+  #taskPopup span {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  #taskPopup input,
+  .button-container {
+    width: 80%;
+  }
+
+  .overSelect {
+    width: 89%;
+  }
   #assigendToContainer {
     height: 100%;
     overflow-y: scroll;
@@ -96,7 +113,7 @@
     cursor: pointer;
   }
 
-  .editButton{
+  .editButton {
     bottom: 32px;
     right: 32px;
   }
@@ -162,12 +179,13 @@
     align-items: center;
   }
 
-/*   #taskPopup, #taskPopupContacts {
+  /*   #taskPopup, #taskPopupContacts {
     width: 93vw;
     height: 95vh;
   } */
 
-  #taskPopup, #taskPopupContacts {
+  #taskPopup,
+  #taskPopupContacts {
     height: 100% !important;
     width: 100% !important;
     border-radius: 0 !important;
