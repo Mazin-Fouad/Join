@@ -69,12 +69,19 @@
 }
 
 @media (max-width: 788.98px) {
+  .saveBtn {
+    bottom: 25px;
+    right: 25px;
+  }
+
   .create-button,
   .clear-button {
     padding: 20px 30px;
     white-space: nowrap;
   }
-
+  .cancel-container {
+    width: 95%;
+  }
   .create-button img {
     margin-left: 5px;
   }
@@ -187,6 +194,8 @@
     width: unset;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 0 2%;
   }
 
   .contacts-inputs {
