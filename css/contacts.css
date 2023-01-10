@@ -173,6 +173,16 @@
   justify-content: center;
 }
 
+.contactText span:first-child {
+  transition: all 0.5s ease-in-out;
+}
+
+.contactText span:first-child:hover {
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+  color: #2a3647;
+}
+
 .displaycontactinfos {
   animation: slide-bl 3s ease 0s 1 normal none;
 }

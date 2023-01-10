@@ -13,6 +13,7 @@ let assigendEdit;
 function showInputsForm() {
   if (window.location.href.indexOf('board') > -1) {
     document.getElementById('form-board').classList.remove('d-none');
+    document.getElementById('form-board').classList.add('scale-in-center');
   } else if (window.location.href.indexOf('contacts') > -1) {
     document.getElementById('form-contacts').classList.remove('d-none');
   }

@@ -273,6 +273,9 @@
 }
 
 @media (max-width: 1025px) {
+  #title {
+    height: 4vh !important;
+  }
   .todo {
     align-items: center;
     width: 100% !important;
