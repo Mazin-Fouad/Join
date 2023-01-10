@@ -202,6 +202,8 @@ option {
 
 .selectBox {
   position: relative;
+  padding-right: 25px;
+  background-color: #fff;
 }
 
 .selectBox select {
@@ -313,6 +315,7 @@ option {
 .subTaskImages {
   display: flex;
   align-items: center;
+  padding-right: 10px;
 }
 
 .subTaskImages img {
