@@ -101,6 +101,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
+  position: absolute;
+  bottom: 10%;
+  z-index: 2;
 }
 
 .contactbutton {
@@ -163,7 +166,7 @@
   margin-right: 20px;
 }
 
-.contactIcon > span {
+.contactIcon>span {
   color: #fff;
 }
 

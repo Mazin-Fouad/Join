@@ -348,7 +348,8 @@
   }
 
   .todo-content {
-    width: 80% !important;
+    min-width: 280px;
+    max-width: 280px;
   }
 
   .box-footer :nth-child(2) {

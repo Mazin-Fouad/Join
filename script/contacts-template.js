@@ -29,11 +29,6 @@ function openContactHTML(splittedName, mail) {
     <p>018475633948</p>
 </div>
 
-<div class="addcontact">
-    <div class="contactbutton" onclick="addNewContact()">
-        <p>NEW CONTACT</p>
-        <img src="./assets/img/contactlogo.png" alt="">
-    </div>
-</div>
+
     `;
 }
