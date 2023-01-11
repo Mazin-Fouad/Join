@@ -1,3 +1,4 @@
+loadTasks();
 let currentDraggedElement;
 let currentCategory;
 let taskCategory;
@@ -313,5 +314,24 @@ function searchTasks(value) {
       renderFooter(i, searchTask);
       styleCategory(searchTask, i);
     }
+  }
+}
+
+function deleteTask(i) {
+  allTasks.splice(i, 1);
+  location.reload();
+  saveToLocalstorage();
+  startRendering();
+}
+
+function saveToLocalstorage() {
+  let tasksAsText = JSON.stringify(allTasks);
+  localStorage.setItem('allTasks', tasksAsText);
+}
+
+function loadTasks() {
+  let tasksAsText = localStorage.getItem('allTasks');
+  if (tasksAsText) {
+    allTasks = JSON.parse(tasksAsText);
   }
 }
