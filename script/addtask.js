@@ -19,20 +19,20 @@ function checkAllInputs() {
   checkBoxes();
   if (window.location.href.indexOf('addtask') > -1) {
     box = document.getElementById('msgBoxAddTask');
-  } else if (window.location.href.indexOf('board') > -1){
+  } else if (window.location.href.indexOf('board') > -1) {
     box = document.getElementById('msgBoxBoard');
   }
 
   if (temporaryAssigned.length == 0) {
-    box.innerHTML = "Kein Mitarbeiter ausgewählt";
+    box.innerHTML = 'No employee selected';
     box.classList.remove('d-none');
   } else {
     if (!prio) {
-      box.innerHTML = "Keine Priorität ausgewählt";
+      box.innerHTML = 'No priority selected';
       box.classList.remove('d-none');
     } else {
       if (!category) {
-        box.innerHTML = "Keine Kategorie ausgewählt";
+        box.innerHTML = 'No category selected';
         box.classList.remove('d-none');
       } else {
         addTask();
