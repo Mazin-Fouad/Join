@@ -306,7 +306,7 @@ function allowDrop(ev) {
 }
 
 async function moveTo(category, i) {
-  if (!currentDraggedElement) {
+  if (currentDraggedElement == undefined) {
     allTasks[i]['status'] = category;
     await backend.setItem('allTasks', JSON.stringify(allTasks));
     cancelTaskPopup();
