@@ -7,9 +7,7 @@ function onload() {
     let msgBox = document.getElementById('msgBox');
     msgBox.classList.remove('d-none');
     msgBox.innerHTML = `${msg}`;
-  } else {
-    //display none
-  }
+  } 
 }
 
 function openSignUp() {

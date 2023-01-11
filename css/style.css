@@ -260,3 +260,32 @@ a {
   height: 200px;
   overflow-y: scroll;
 }
+
+.msgBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  left: 50%;
+  background-color: #2a3647;
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
+  animation: slide-from-bottom 1s ease 0s 1 normal none;
+  z-index: 2;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1500px);
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

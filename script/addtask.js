@@ -10,20 +10,30 @@ let subTaskCounter = 0;
 let category;
 let currentColor;
 let allCategorys = [];
+let box;
 
 /**
  * form will be not send if check boxes don't have value
  */
 function checkAllInputs() {
   checkBoxes();
+  if (window.location.href.indexOf('addtask') > -1) {
+    box = document.getElementById('msgBoxAddTask');
+  } else if (window.location.href.indexOf('board') > -1){
+    box = document.getElementById('msgBoxBoard');
+  }
+
   if (temporaryAssigned.length == 0) {
-    alert('Kein Mitarbeiter ausgewählt');
+    box.innerHTML = "Kein Mitarbeiter ausgewählt";
+    box.classList.remove('d-none');
   } else {
     if (!prio) {
-      alert('Keine Priorität ausgewählt');
+      box.innerHTML = "Keine Priorität ausgewählt";
+      box.classList.remove('d-none');
     } else {
       if (!category) {
-        alert('Keine Kategorie ausgewählt');
+        box.innerHTML = "Keine Kategorie ausgewählt";
+        box.classList.remove('d-none');
       } else {
         addTask();
       }

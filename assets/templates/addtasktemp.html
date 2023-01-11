@@ -4,7 +4,7 @@
 
 <form id="myForm" onsubmit="checkAllInputs();return false">
   <div class="addtask-content">
-    
+    <div class="msgBox d-none" id="msgBoxAddTask"></div>
 
     <div class="leftside-content">
 
@@ -71,10 +71,8 @@
           </div>
           <div id="checkboxes">
           </div>
-          <div class ="usercontainer" id="users">
-            
-          </div>
         </div>
+        <div class="usercontainer" id="users"></div>
 
       </div>
     </div>
@@ -117,10 +115,7 @@
         </div>
         <div id="subtaskList"></div>
 
-        <!--         <div class="checkbox-container" id="checkbox-container">
-          <input type="checkbox" />
-          <p>Subtask 1</p>
-        </div> -->
+
       </div>
 
       <div class="button-container-end">
@@ -133,9 +128,10 @@
           <img src="assets/img/acceptimg.svg" alt="cancel" />
         </button>
 
-        
+
 
       </div>
-    </div>
+    </div>    
 </form>
+
 </div>

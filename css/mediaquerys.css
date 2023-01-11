@@ -292,6 +292,12 @@
 }
 
 @media (max-width: 1025px) {
+
+  .msgBox{
+    bottom: unset;
+    left: unset;
+  }
+
   #title {
     height: 4vh !important;
   }
