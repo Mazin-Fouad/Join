@@ -74,22 +74,18 @@ function checkProgressStatus(taskCategory, printTask, i, doneTasksContent, await
   if (printTask['status'] == 'open') {
     taskCategory = 'open';
     ProgressbarValue = 0;
-    fulfillment = 0;
     openTasksContent.innerHTML += TaskCard(taskCategory, printTask, i, ProgressbarValue, fulfillment);
   } else if (printTask['status'] == 'inProgress') {
     taskCategory = 'inProgress';
     ProgressbarValue = 33.33;
-    fulfillment = 1;
     inProgressTasksContent.innerHTML += TaskCard(taskCategory, printTask, i, ProgressbarValue, fulfillment);
   } else if (printTask['status'] == 'awaitingFeedback') {
     taskCategory = 'awaitingFeedback';
     ProgressbarValue = 66.66;
-    fulfillment = 2;
     awaitingFeedbackContent.innerHTML += TaskCard(taskCategory, printTask, i, ProgressbarValue, fulfillment);
   } else {
     taskCategory = 'done';
     ProgressbarValue = 100;
-    fulfillment = 3;
     doneTasksContent.innerHTML += TaskCard(taskCategory, printTask, i, ProgressbarValue, fulfillment);
   }
 }
@@ -310,7 +306,6 @@ function allowDrop(ev) {
 }
 
 async function moveTo(category, i) {
-
   if (!currentDraggedElement) {
     allTasks[i]['status'] = category;
     await backend.setItem('allTasks', JSON.stringify(allTasks));
