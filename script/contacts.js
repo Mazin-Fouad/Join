@@ -9,7 +9,6 @@ let contactsOpenForMobile = false;
 async function sortContacts() {
   await init();
   users.sort(function (a, b) {
-    console.log(a.name, b.name);
     let x = a.name.toUpperCase();
     let y = b.name.toUpperCase();
     return x == y ? 0 : x > y ? 1 : -1;
