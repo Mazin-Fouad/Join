@@ -126,6 +126,6 @@ function prioContentHTML(allTasks, i) {
 function editTaskButton(i) {
   return /*html*/ `
   <img class="editButton" src="./assets/img/todo.png" alt="edit" onclick="editTask(${i})">
-  <img class="editButton deletebtn" src="../assets/img/trash.png" alt="delete" onclick="deleteTask(${i})">
+  <img class="editButton deletebtn" src="./assets/img/trash.png" alt="delete" onclick="deleteTask(${i})">
     `;
 }
