@@ -96,15 +96,6 @@
   font-size: 1rem;
 }
 
-.addcontact {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  position: absolute;
-  bottom: 10%;
-  z-index: 2;
-}
 
 .contactbutton {
   display: flex;
@@ -120,6 +111,7 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+  z-index: 2;
 }
 
 .contactbutton:hover {
