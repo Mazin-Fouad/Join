@@ -32,11 +32,11 @@ function footerTemplate(firstLetter, secondLetter, restAssigendLength, printTask
       `;
 }
 
-function createTaskContentHTML() {
+function createTaskContentHTML(i) {
   return /*html*/ `
   <div class="cancel-container">
-  <span class="category" id="categoryPopup"></span>
-  <img src="./assets/img/cancelimg.svg" onclick="cancelTaskPopup()">
+    <span class="category" id="categoryPopup"></span>
+    <img src="./assets/img/cancelimg.svg" onclick="cancelTaskPopup()">
   </div>
   <h1 id="titlePopup"></h1>
   <p id="descriptionPopup"></p>
@@ -44,10 +44,16 @@ function createTaskContentHTML() {
   <p id="prio"></p>
   
   <div class="assigend-popup">
-  <span id="assigendCircels"></span>
-  <div id="assigendToContainer">
-  <b>Assigned To:</b>
+    <span id="assigendCircels"></span>
+    <div id="assigendToContainer">
+      <b>Assigned To:</b>
+    </div>
   </div>
+  <div class="boardCategoryBtn">
+    <button id="popupstatusopen" onclick="moveTo('open', '${i}')" class="workplace">Todo</button>
+    <button id="popupstatusinprogress" onclick="moveTo('inProgress', '${i}')" class="workplace">In Progress</button>
+    <button id="popupstatusawaitingfeedback" onclick="moveTo('awaitingFeedback', '${i}')" class="workplace">Awaiting Feedback</button>
+    <button id="popupstatusdone" onclick="moveTo('done', '${i}')" class="workplace">Done</button>
   </div>
   <div id="btnHolder"></div>
   `;

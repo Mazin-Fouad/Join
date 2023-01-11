@@ -143,7 +143,7 @@ function styleCategory(printTask, b) {
  * to show the popup after click on the task box
  */
 function showOpenTaskPopup(i) {
-  document.getElementById('taskPopup').innerHTML = createTaskContentHTML();
+  document.getElementById('taskPopup').innerHTML = createTaskContentHTML(i);
   document.getElementById('popUpBackground').classList.add('popUpBackground');
   document.getElementById('taskPopup').classList.remove('d-none');
   document.getElementById('categoryPopup').innerHTML = allTasks[i].category.name;
@@ -154,14 +154,30 @@ function showOpenTaskPopup(i) {
   document.getElementById('prio').innerHTML = prioContentHTML(allTasks, i);
   document.getElementById('btnHolder').innerHTML = editTaskButton(i);
   checkPriorityPopup(allTasks, i);
+  checkStatusPopup(allTasks, i);
   let assigendToContent = document.getElementById('assigendToContainer');
   for (let j = 0; j < allTasks[i].assigned.length; j++) {
     const assignedUser = allTasks[i].assigned[j];
     let secondLetter = assignedUser.split(' ')[1].charAt(0);
     assigendToContent.innerHTML += assigendContentHTML(j, assignedUser, secondLetter);
     styleAssignedCircles(j);
-    printTask = allTasks[i];
-    checkTaskPrio(printTask, i);
+  }
+  printTask = allTasks[i];
+  checkTaskPrio(printTask, i);
+}
+
+function checkStatusPopup(allTasks, i) {
+  if (allTasks[i].status === 'open') {
+    document.getElementById('popupstatusopen').style.background = '#50aadf';
+  }
+  if (allTasks[i].status === 'awaitingFeedback') {
+    document.getElementById('popupstatusawaitingfeedback').style.background = '#50aadf';
+  }
+  if (allTasks[i].status === 'inProgress') {
+    document.getElementById('popupstatusinprogress').style.background = '#50aadf';
+  }
+  if (allTasks[i].status === 'done') {
+    document.getElementById('popupstatusdone').style.background = '#50aadf';
   }
 }
 
@@ -293,10 +309,18 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 
-async function moveTo(category) {
-  allTasks[currentDraggedElement]['status'] = category;
-  await backend.setItem('allTasks', JSON.stringify(allTasks));
+async function moveTo(category, i) {
+
+  if (!currentDraggedElement) {
+    allTasks[i]['status'] = category;
+    await backend.setItem('allTasks', JSON.stringify(allTasks));
+    cancelTaskPopup();
+  } else {
+    allTasks[currentDraggedElement]['status'] = category;
+    await backend.setItem('allTasks', JSON.stringify(allTasks));
+  }
   startRendering();
+  currentDraggedElement = undefined;
 }
 
 function searchTasks(value) {

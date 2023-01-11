@@ -441,9 +441,3 @@
     padding: unset;
   }
 }
-
-@media (max-width: 1680px) {
-  .todo-content {
-    width: unset;
-  }
-}
