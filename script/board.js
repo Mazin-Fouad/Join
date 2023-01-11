@@ -1,4 +1,3 @@
-loadTasks();
 let currentDraggedElement;
 let currentCategory;
 let taskCategory;
@@ -319,19 +318,13 @@ function searchTasks(value) {
 
 function deleteTask(i) {
   allTasks.splice(i, 1);
-  location.reload();
   saveToLocalstorage();
   startRendering();
+  setTimeout(() => {
+    location.reload();
+  }, 500);
 }
 
-function saveToLocalstorage() {
-  let tasksAsText = JSON.stringify(allTasks);
-  localStorage.setItem('allTasks', tasksAsText);
-}
-
-function loadTasks() {
-  let tasksAsText = localStorage.getItem('allTasks');
-  if (tasksAsText) {
-    allTasks = JSON.parse(tasksAsText);
-  }
+async function saveToLocalstorage() {
+  await backend.setItem('allTasks', JSON.stringify(allTasks));
 }
