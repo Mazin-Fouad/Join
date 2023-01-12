@@ -53,6 +53,9 @@ body {
 a {
   text-decoration: none !important;
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
 }
 
 .right-container {
@@ -288,4 +291,36 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.links .links-container > a {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background-color: transparent;
+  padding: 5px 10px;
+}
+
+.links .links-container > a:hover,
+.legal > a:hover {
+  background: #066893;
+  color: #fff;
+  width: 6em;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 225ms;
+  white-space: nowrap;
+}
+
+.clicked {
+  background: #066893;
+  color: #fff;
+  width: 6em;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 225ms;
+}
+
+#legalItem:hover {
+  width: 7em;
 }

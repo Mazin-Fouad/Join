@@ -90,3 +90,21 @@ function logOutUser() {
 function forwardingToSummary() {
   window.location.href = './summary.html';
 }
+
+function checkPage() {
+  let currentURL = window.location.href;
+  if (currentURL.includes('summary')) {
+    console.log('You are on the summary page!');
+    document.getElementById('navSummary').classList.add('clicked');
+  } else if (currentURL.includes('board')) {
+    console.log('You are on the board page!');
+  } else if (currentURL.includes('addtask')) {
+    console.log('You are on the addtask page!');
+  } else if (currentURL.includes('contacts')) {
+    console.log('You are on the contacts page!');
+  } else {
+    console.log('You are on the leagal page!');
+  }
+}
+
+window.onload = checkPage();
