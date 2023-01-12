@@ -19,6 +19,7 @@ async function init() {
   if (window.location.href.indexOf('board') > -1) {
     startRendering();
   }
+  checkPage();
 }
 /**
  * This function is used to include the header
@@ -94,17 +95,14 @@ function forwardingToSummary() {
 function checkPage() {
   let currentURL = window.location.href;
   if (currentURL.includes('summary')) {
-    console.log('You are on the summary page!');
     document.getElementById('navSummary').classList.add('clicked');
   } else if (currentURL.includes('board')) {
-    console.log('You are on the board page!');
+    document.getElementById('navBoard').classList.add('clicked');
   } else if (currentURL.includes('addtask')) {
-    console.log('You are on the addtask page!');
+    document.getElementById('navAddtask').classList.add('clicked');
   } else if (currentURL.includes('contacts')) {
-    console.log('You are on the contacts page!');
-  } else {
-    console.log('You are on the leagal page!');
+    document.getElementById('navContacts').classList.add('clicked');
+  } else if (currentURL.includes('legal')) {
+    console.log('Legal');
   }
 }
-
-window.onload = checkPage();

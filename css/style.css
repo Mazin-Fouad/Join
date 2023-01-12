@@ -313,12 +313,11 @@ a {
 }
 
 .clicked {
-  background: #066893;
-  color: #fff;
-  width: 6em;
-  padding: 5px 10px;
-  border-radius: 10px;
-  transition: all 225ms;
+  background-color: #066893 !important;
+  color: #fff !important;
+  width: 6em !important;
+  padding: 5px 10px !important;
+  border-radius: 10px !important;
 }
 
 #legalItem:hover {
