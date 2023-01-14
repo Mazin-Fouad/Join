@@ -104,5 +104,6 @@ function checkPage() {
     document.getElementById('navContacts').classList.add('clicked');
   } else if (currentURL.includes('legal')) {
     console.log('Legal');
+    document.getElementById('legalItem').classList.add('clicked');
   }
 }

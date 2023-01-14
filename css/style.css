@@ -305,7 +305,7 @@ a {
 .legal > a:hover {
   background: #066893;
   color: #fff;
-  width: 6em;
+  width: 6.5em;
   padding: 5px 10px;
   border-radius: 10px;
   transition: all 225ms;
@@ -315,11 +315,19 @@ a {
 .clicked {
   background-color: #066893 !important;
   color: #fff !important;
-  width: 6em !important;
+  width: 6.5em !important;
   padding: 5px 10px !important;
   border-radius: 10px !important;
 }
 
+#legalItem {
+  padding: 5px 10px;
+  background-color: transparent;
+  width: 8em;
+  white-space: nowrap;
+}
 #legalItem:hover {
-  width: 7em;
+  padding: 5px 10px;
+  width: 8em;
+  background: #066893;
 }
