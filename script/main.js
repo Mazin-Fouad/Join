@@ -103,7 +103,6 @@ function checkPage() {
   } else if (currentURL.includes('contacts')) {
     document.getElementById('navContacts').classList.add('clicked');
   } else if (currentURL.includes('legal')) {
-    console.log('Legal');
-    document.getElementById('legalItem').classList.add('clicked');
+    console.log('Legal Page');
   }
 }

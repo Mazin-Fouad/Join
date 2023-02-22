@@ -1,4 +1,4 @@
-setURL('https://mazin-fouad.developerakademie.net/smallest_backend_ever');
+setURL('https://mazinfouad.com/smallest_backend_ever');
 
 async function addUser() {
   let email = document.getElementById('email');
