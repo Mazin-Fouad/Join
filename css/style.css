@@ -78,7 +78,7 @@ a {
 .headline {
   display: flex;
   align-items: center;
-  padding-left: 10%;
+  padding-left: 8%;
 }
 
 .headline h1 {

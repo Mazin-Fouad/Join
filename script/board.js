@@ -7,6 +7,8 @@ let label;
 let fulfillment;
 let assigendEdit;
 
+let taskIsOpen = false;
+
 /**
  * open task popup when user clicks on task box
  */
@@ -139,6 +141,7 @@ function styleCategory(printTask, b) {
  * to show the popup after click on the task box
  */
 function showOpenTaskPopup(i) {
+  taskIsOpen = true;
   document.getElementById('taskPopup').innerHTML = createTaskContentHTML(i);
   document.getElementById('popUpBackground').classList.add('popUpBackground');
   document.getElementById('taskPopup').classList.remove('d-none');

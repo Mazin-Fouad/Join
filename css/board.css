@@ -22,8 +22,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: -20px;
 }
 
 .board h1 {
@@ -95,11 +96,12 @@
 }
 
 .all-tasks-contnet {
+  margin-top: -20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
   position: relative;
   text-transform: capitalize;
 }
@@ -136,7 +138,7 @@
 
 .todo-content:hover {
   transition: all 0.3s ease-in-out;
-  transform: rotate(1deg);
+  transform: scale(1.04);
 }
 
 .create-todo span {
