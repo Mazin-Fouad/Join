@@ -19,6 +19,7 @@ function showInputsForm() {
   } else if (window.location.href.indexOf('contacts') > -1) {
     document.getElementById('form-contacts').classList.remove('d-none');
   }
+  taskIsOpen = true;
 }
 
 /**
@@ -287,6 +288,18 @@ function cancelTaskPopup() {
   document.getElementById('taskPopup').classList.add('d-none');
 }
 
+document.addEventListener(
+  'click',
+  function (event) {
+    const taskPopup = document.getElementById('taskPopup');
+    const isClickInsidePopup = taskPopup.contains(event.target);
+    if (!isClickInsidePopup && taskIsOpen) {
+      cancelTaskPopup();
+    }
+  },
+  true
+); // Use capture phase to ensure this runs before specific click handlers that might stop propagation
+
 function checkPriorityPopup(allTasks, i) {
   if (allTasks[i].prio === 'urgent') {
     document.getElementById('prio-status').style.background = 'red';
@@ -343,7 +356,7 @@ function deleteTask(i) {
   saveToLocalstorage();
   startRendering();
   setTimeout(() => {
-    location.reload();
+    cancelTaskPopup();
   }, 500);
 }
 

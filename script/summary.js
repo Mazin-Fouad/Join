@@ -124,12 +124,7 @@ function fillContent() {
   document.getElementById('urgentTasks').innerHTML = `${urgentTasks.length}`;
   document.getElementById('tasksToDo').innerHTML = `${tasksToDo.length}`;
   document.getElementById('tasksDone').innerHTML = ` ${tasksDone.length}`;
-
-  if (urgentTasks.length > 0) {
-    document.getElementById('date').innerHTML = `${formatted_date}`;
-  } else {
-    document.getElementById('date').innerHTML = `-`;
-  }
+  document.getElementById('date').innerHTML = formatted_date ? formatted_date : 'Deadline is clear';
 }
 
 function forwardToBoard() {
